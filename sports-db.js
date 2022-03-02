@@ -16,15 +16,11 @@ const removeParent = () => {
     rowParent.textContent = "";
 }
 
-// pre-loader-----------------------
-window.onload = function() {
-    setTimeout(function() {
-        const preLoader = document.getElementById('pre-loader');
-        preLoader.style.display = 'none';
+// pre - loader-- -- -- -- -- -- -- -- -- -- -- -
+const preLoad = document.getElementById('pre-loader');
 
-    }, 2000);
-
-
+function preLoader() {
+    preLoad.style.display = 'none';
 }
 
 
