@@ -24,6 +24,14 @@ function preLoader() {
 }
 
 
+
+document.getElementById('input-field').addEventListener('keypress', function(event) {
+    console.log(event);
+    if (event.keyCode == 13) {
+        document.getElementById('search-btn').click();
+    };
+});
+
 const search = () => {
     const inputField = document.getElementById('input-field');
     const inputFieldValue = inputField.value;
