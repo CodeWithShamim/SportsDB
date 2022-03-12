@@ -26,10 +26,12 @@ function preLoader() {
 
 
 document.getElementById('input-field').addEventListener('keypress', function(event) {
+    // event.preventDefault()
     console.log(event);
-    if (event.keyCode == 13) {
+    if (event.key == "Enter") {
         document.getElementById('search-btn').click();
     };
+
 });
 
 const search = () => {
@@ -39,6 +41,7 @@ const search = () => {
 
     // add spinner 
     addSpinner('block');
+    errorMessage.style.display = 'none';
     // remove parent 
     removeParent()
 
